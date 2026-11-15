@@ -13,6 +13,13 @@
       "source": "./",
       "strict": false,
       "skills": ["./better-code-review"]
+    },
+    {
+      "name": "better-grilling",
+      "description": "Interviews you about a plan or design one question at a time, in a fixed card format that explains each concept, draws a diagram where it helps, and recommends an answer.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./better-grilling"]
     }
   ]
 }
