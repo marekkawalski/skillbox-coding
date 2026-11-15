@@ -22,6 +22,14 @@
       "source": "./",
       "strict": false,
       "skills": ["./better-grilling"]
+    },
+    {
+      "name": "help-me-understand",
+      "version": "1.0.0",
+      "description": "Tells you what something does and how it does it (code, a script, a pull or merge request, a ticket, a coding concept, or anything else) in plain words and in your language, in a fixed card with a diagram, and saves the explanation for reuse.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./help-me-understand"]
     }
   ]
 }
