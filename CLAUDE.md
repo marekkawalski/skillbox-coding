@@ -3,6 +3,7 @@
 Agent skills published for `npx skills` and as a Claude Code plugin marketplace. One directory per skill; `SKILL.md` is the entry point and everything it references is resolved relative to that directory.
 
 - A new skill needs an entry in `.claude-plugin/marketplace.json` (`"strict": false`, `"skills": ["./<name>"]`) and a row in `README.md`. Skill directories stay at the repo root: `npx skills` relies on that layout.
+- Each skill has its own semver version, in two places that must match: `metadata.version` in its `SKILL.md` frontmatter and `version` on its plugin entry in `marketplace.json`. Bump the version every time anything in a skill's directory changes, however small (a typo, a lens, a script), in the same commit, in both places: patch for wording and fixes, minor for new behaviour, major when the user-facing format or data layout changes. Claude Code only offers a plugin update when its version changes, so a missed bump leaves users on the old copy.
 
 ## Public repo
 
@@ -32,5 +33,6 @@ This repo is public, and so is its whole git history: anything pushed stays read
 ## Verify
 
 - Marketplace: `claude plugin validate . --strict`.
+- Versions: for every skill directory in the staged diff, its `SKILL.md` `metadata.version` was raised and matches its `version` in `marketplace.json`.
 
 - Script: `bash -n better-code-review/scripts/collect-context.sh`, then run it inside a scratch git repo with `HOME` pointed at a temp dir and read its output. Delete the `bcr-*` temp directory it names in `workdir=`.

@@ -4,11 +4,12 @@
     "name": "Marek Kawalski"
   },
   "metadata": {
-    "description": "Agent skills by Marek Kawalski"
+    "description": "Agent coding skills by Marek Kawalski"
   },
   "plugins": [
     {
       "name": "better-code-review",
+      "version": "1.0.0",
       "description": "Requirement-driven code review for a finished branch, pull or merge requests, or a whole ticket: it maps what the change affects beyond its diff and keeps a serious finding only if an independent challenger fails to disprove it.",
       "source": "./",
       "strict": false,
@@ -16,6 +17,7 @@
     },
     {
       "name": "better-grilling",
+      "version": "1.0.0",
       "description": "Interviews you about a plan or design one question at a time, in a fixed card format that explains each concept, draws a diagram where it helps, and recommends an answer.",
       "source": "./",
       "strict": false,

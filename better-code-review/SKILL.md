@@ -1,6 +1,8 @@
 ---
 name: better-code-review
 description: End-of-work review of a finished change - the current branch, named pull or merge requests, or everything attached to a ticket across repositories. It turns the stated intent into a ledger of requirements, maps what the change touches beyond its own diff, sends targeted probes only where the map shows risk, and keeps a serious finding only if an independent challenger fails to disprove it. Use when implementation is complete and the project's own checks pass, before calling the work done, or when the user asks for a code review or invokes better-code-review. Not for edits still in progress.
+metadata:
+  version: "1.0.0"
 ---
 
 # Better Code Review

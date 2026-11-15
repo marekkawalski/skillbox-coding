@@ -1,6 +1,8 @@
 ---
 name: "better-grilling"
 description: "Interview the user about a plan or design one question at a time in a fixed, icon-marked card format, explaining each concept and drawing a diagram where it helps. Use for: grill me, stress-test my plan, poke holes in this design."
+metadata:
+  version: "1.0.0"
 ---
 
 # Better grilling
