@@ -1,0 +1,3 @@
+interface:
+  display_name: "Better Code Review"
+  short_description: "Requirement-driven review that checks every serious finding twice"
