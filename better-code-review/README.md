@@ -212,14 +212,14 @@ Afterwards you choose which findings to fix. The skill fixes those in your worki
 
 ## What it remembers
 
-Everything lives in `~/.better-code-review/`, outside your repositories:
+Everything lives in `~/.skillbox-data/`, outside your repositories. The review's own files are under `better-code-review/`; connections are shared with other skills:
 
 | Path | Holds |
 |---|---|
-| `reports/<host>__<owner>-<repo>/<branch>/` | One report per run, named by UTC time and commit |
-| `reports/_tickets/<KEY>/` | Reports of multi-repository ticket reviews |
-| `context/preferences.md` | How you want reviews done: what to stress, what never to raise |
-| `context/repos/<repo>.md` | What is known about one repository: accepted risks, deliberate oddities, findings you dismissed and why |
+| `better-code-review/reports/<host>__<owner>-<repo>/<branch>/` | One report per run, named by UTC time and commit |
+| `better-code-review/reports/_tickets/<KEY>/` | Reports of multi-repository ticket reviews |
+| `better-code-review/context/preferences.md` | How you want reviews done: what to stress, what never to raise |
+| `better-code-review/context/repos/<repo>.md` | What is known about one repository: accepted risks, deliberate oddities, findings you dismissed and why |
 | `connections/<name>.md` | How to reach one code host or tracker |
 
 **User context.** When you reject a finding with a reason ("that's intentional, the cache is rebuilt nightly"), the skill offers to remember it for that repository and does not raise it again unless the code around it changes. You can also write these files yourself. Nothing is saved without your yes.
@@ -229,14 +229,14 @@ Everything lives in `~/.better-code-review/`, outside your repositories:
 ## Install
 
 ```sh
-npx skills add marekkawalski/skills -g -s better-code-review
+npx skills add marekkawalski/skillbox-coding -g -s better-code-review
 ```
 
 Or as a Claude Code plugin:
 
 ```
-/plugin marketplace add marekkawalski/skills
-/plugin install better-code-review@marekkawalski-skills
+/plugin marketplace add marekkawalski/skillbox-coding
+/plugin install better-code-review@skillbox-coding
 ```
 
 ## Requirements

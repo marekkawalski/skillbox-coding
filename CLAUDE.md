@@ -24,7 +24,8 @@ This repo is public, and so is its whole git history: anything pushed stays read
 - The `necessity` lens questions whether the change needs to exist. It checks facts in the code, never product decisions, and its findings go through the challenge like any other.
 - The report format is versioned (`<!-- better-code-review:report schema=N -->`). Changing sections, ID prefixes or status words means raising N in `report.md`; older reports are then skipped on comparison.
 - `scripts/collect-context.sh` takes no arguments on purpose (its only input is a validated `BCR_BASE`) and treats the origin URL and branch name as untrusted: anything that becomes a path goes through `to_slug`. It never runs external diff drivers or textconv filters.
-- `~/.better-code-review/` (`reports/`, `context/`, `connections/`) is a user-facing layout: moving or reshaping it orphans users' reports, context and connections. Nothing written there may ever contain a secret value.
+- `~/.skillbox-data/` is a user-facing layout shared by every skillbox repo: `<skill>/` per skill (here `better-code-review/reports/`, `better-code-review/context/`) and `connections/` shared by all skills. Moving or reshaping it orphans users' reports, context and connections. Nothing written there may ever contain a secret value.
+- The connection-file format is a contract between skills, possibly in other skillbox repos. Each skill that uses connections carries its own copy of `protocol/connections.md`; keep the copies identical. Skills add missing recipes and repair failing ones, never rewrite or remove working ones.
 - Skills must stay harness-neutral (Claude Code, Codex, OpenCode, Copilot): no tool names without the alternatives, no hardcoded install paths.
 - The copy agents actually load is the installed one (`~/.agents/skills/better-code-review`), not this checkout. Reinstall after changes before judging behaviour.
 

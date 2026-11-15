@@ -1,6 +1,6 @@
-# skills
+# skillbox-coding
 
-Agent skills, installable with [`npx skills`](https://github.com/vercel-labs/skills). They work in Claude Code, Codex, OpenCode and GitHub Copilot.
+Agent skills for coding, installable with [`npx skills`](https://github.com/vercel-labs/skills). They work in Claude Code, Codex, OpenCode and GitHub Copilot.
 
 ## Skills
 
@@ -11,7 +11,7 @@ Agent skills, installable with [`npx skills`](https://github.com/vercel-labs/ski
 Install one with `-s <name>`:
 
 ```sh
-npx skills add marekkawalski/skills -g -s better-code-review
+npx skills add marekkawalski/skillbox-coding -g -s better-code-review
 ```
 
 ### Claude Code plugin marketplace
@@ -19,6 +19,6 @@ npx skills add marekkawalski/skills -g -s better-code-review
 The repo is also a Claude Code marketplace; each skill is a plugin of the same name:
 
 ```
-/plugin marketplace add marekkawalski/skills
-/plugin install better-code-review@marekkawalski-skills
+/plugin marketplace add marekkawalski/skillbox-coding
+/plugin install better-code-review@skillbox-coding
 ```

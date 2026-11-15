@@ -22,9 +22,13 @@ to_slug() {
   printf '%s' "${s:-unnamed}"
 }
 
-store="$HOME/.better-code-review"
-mkdir -p "$store/reports" "$store/context/repos" "$store/connections"
-chmod 700 "$store"
+# One root for every skillbox, so connections learned by one skill serve all.
+# Not ~/.skillbox: unrelated skill managers already own that folder.
+root="$HOME/.skillbox-data"
+store="$root/better-code-review"
+connections_dir="$root/connections"
+mkdir -p "$store/reports" "$store/context/repos" "$connections_dir"
+chmod 700 "$root"
 
 list_names() {
   local dir=$1 f out=""
@@ -37,7 +41,8 @@ list_names() {
 
 echo "now_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 echo "store=$store"
-echo "connections=$(list_names "$store/connections")"
+echo "connections_dir=$connections_dir"
+echo "connections=$(list_names "$connections_dir")"
 if [ -f "$store/context/preferences.md" ]; then
   echo "preferences=$store/context/preferences.md"
 else

@@ -1,8 +1,10 @@
 # Connections
 
-A connection file records *how this machine reaches one external system*: a code host or a tracker. It lives at `~/.better-code-review/connections/<name>.md`, where `<name>` is the host name for code hosts (`github.com`, `gitlab.example.com`) and a short lowercase name for trackers (`jira`). The name may contain only letters, digits, dots and dashes.
+A connection file records *how this machine reaches one external system*: a code host or a tracker. It lives at `~/.skillbox-data/connections/<name>.md`, where `<name>` is the host name for code hosts (`github.com`, `gitlab.example.com`) and a short lowercase name for trackers (`jira`). The name may contain only letters, digits, dots and dashes.
 
 It is written once, after the method has been seen to work, and then used by every later review and by every agent in it. An agent given a connection file uses its recipes and nothing else: no other host, no other tool, no improvised request.
+
+Other skills read and write the same files and may need recipes this one never uses. Add a recipe that is missing and repair one that fails; never rewrite or remove a recipe that works, even if this skill does not use it.
 
 ## What may never be in it
 

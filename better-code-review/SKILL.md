@@ -12,7 +12,7 @@ A review here is an investigation with four questions, in this order:
 3. **What does it touch that it does not show?** (the change map)
 4. **Can each accusation survive someone trying to knock it down?** (the challenge)
 
-`<skill>` below means the directory this file sits in. `<store>` is `~/.better-code-review`.
+`<skill>` below means the directory this file sits in. `<store>` is `~/.skillbox-data/better-code-review`. `<connections>` is `~/.skillbox-data/connections`, shared with other skills.
 
 ## Ground rules
 
@@ -51,7 +51,7 @@ If the output says `changes=none` and no remote target was named, say there is n
 
 ## 2. Connections
 
-Reaching a code host or a tracker goes through a connection file, `<store>/connections/<name>.md`, where `<name>` is the host (`github.com`) or the tracker's name. One file per system, learned once, reused on every later review, by you and by every agent you start. The format, the discovery procedure and starter recipes are in `<skill>/protocol/connections.md`; read it the first time this review needs a remote system.
+Reaching a code host or a tracker goes through a connection file, `<connections>/<name>.md`, where `<name>` is the host (`github.com`) or the tracker's name. One file per system, learned once, reused on every later review, by you and by every agent you start. The format, the discovery procedure and starter recipes are in `<skill>/protocol/connections.md`; read it the first time this review needs a remote system.
 
 The short version: look for a way in (a connector your harness exposes, an installed CLI, an environment variable whose name fits), try each recipe once, and save the file only after a real fetch succeeded. If nothing works, ask the user how they reach that system. An unreachable code host means its changes cannot be reviewed: say which and stop. An unreachable tracker only costs requirements: continue and record it.
 
