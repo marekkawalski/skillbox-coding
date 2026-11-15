@@ -1,6 +1,8 @@
 # skillbox-coding
 
-Agent skills for coding, installable with [`npx skills`](https://github.com/vercel-labs/skills). They work in Claude Code, Codex, OpenCode and GitHub Copilot.
+A box of hand-picked skills for your coding agent. Each one does a single job well; take out only the ones you need.
+
+Install with [`npx skills`](https://github.com/vercel-labs/skills). They work in Claude Code, Codex, OpenCode and GitHub Copilot.
 
 ## Skills
 
